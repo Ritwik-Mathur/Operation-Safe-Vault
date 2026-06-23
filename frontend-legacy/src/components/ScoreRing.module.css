@@ -1,0 +1,38 @@
+.wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+}
+.svg {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-90deg);
+}
+.bg {
+  fill: none;
+  stroke: var(--bg3);
+  stroke-width: 10;
+}
+.fill {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease, stroke 0.4s;
+}
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.4s;
+}
+.sub { font-size: 0.65rem; color: var(--text3); }

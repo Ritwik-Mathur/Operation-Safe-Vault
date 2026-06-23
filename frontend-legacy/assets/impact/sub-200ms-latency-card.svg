@@ -1,0 +1,40 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1120" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FCFD"/>
+      <stop offset="1" stop-color="#EEF4F8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="190" y1="180" x2="480" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9EE6C5"/>
+      <stop offset="1" stop-color="#2D597D"/>
+    </linearGradient>
+    <filter id="shadow" x="50" y="50" width="1100" height="600" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#17314B" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .kicker { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #168C66; letter-spacing: 1.5px; }
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .body { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #5A7388; }
+      .metric { font: 800 70px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .metric2 { font: 800 30px 'Segoe UI', Arial, sans-serif; fill: #2D597D; }
+    </style>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="70" y="70" width="1060" height="560" rx="38" fill="url(#bg)"/>
+  </g>
+  <text x="120" y="140" class="kicker">REAL-TIME IMPACT</text>
+  <text x="120" y="208" class="title">Sub-200ms Latency</text>
+  <text x="120" y="254" class="body">
+    <tspan x="120" dy="0">Optimized for live calls and</tspan>
+    <tspan x="120" dy="30">high-speed mobile networks.</tspan>
+  </text>
+  <circle cx="270" cy="410" r="120" fill="#EEF7FA"/>
+  <circle cx="270" cy="410" r="86" fill="url(#accent)"/>
+  <path d="M270 338V414L320 444" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="270" cy="410" r="58" stroke="white" stroke-width="12" opacity="0.8"/>
+  <text x="500" y="390" class="metric">&lt;200ms</text>
+  <text x="500" y="434" class="metric2">
+    <tspan x="500" dy="0">Fast enough to act before</tspan>
+    <tspan x="500" dy="36">the user trusts the scam.</tspan>
+  </text>
+</svg>

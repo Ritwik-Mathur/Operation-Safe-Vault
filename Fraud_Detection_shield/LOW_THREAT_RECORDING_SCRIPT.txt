@@ -1,0 +1,33 @@
+================================================================================
+LOW-THREAT READ-ALOUD — save as .WAV, POST to /analyze_voice
+================================================================================
+
+---- SCRIPT A (coffee + weekend) ------------------------------------------------
+
+Hi, it is Alex. Hope your week is going okay.
+
+Want to grab coffee Saturday morning? There is a nice café by the park with
+big windows. We could sit outside if the weather is nice.
+
+If Saturday is busy, Sunday afternoon is fine too. I am flexible.
+
+I might take a walk by the river later — the leaves are starting to change.
+Message me when you have a moment. No rush. Talk soon.
+
+---- SCRIPT B (food + movie) ----------------------------------------------------
+
+Hey, it is Sam. Just checking in.
+
+Do you want to try that new ramen place downtown on Friday? I heard the broth
+is mild and the seating is comfy.
+
+After dinner we could watch something light at my place — nothing scary, maybe
+a comedy. Let me know what sounds fun.
+
+Either way, have a good evening and I will catch up with you later.
+
+================================================================================
+Avoid ad-libbing scam / urgency words (OTP, CVV, bank account, cards, police,
+verify, block, TeamViewer, AnyDesk, screen share, password, right now, emergency,
+expires, etc.) — the app matches substrings in the transcript.
+================================================================================

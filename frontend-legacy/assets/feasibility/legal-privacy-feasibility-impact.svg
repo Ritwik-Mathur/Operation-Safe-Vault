@@ -1,0 +1,79 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="70" x2="1320" y2="830" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FCFD"/>
+      <stop offset="1" stop-color="#EEF4F8"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="280" y1="280" x2="830" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A6E7C6"/>
+      <stop offset="0.55" stop-color="#72C0C8"/>
+      <stop offset="1" stop-color="#274E72"/>
+    </linearGradient>
+    <linearGradient id="green" x1="840" y1="300" x2="1160" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B1EDC9"/>
+      <stop offset="1" stop-color="#189267"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1260" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#16314B" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .kicker { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #168C66; letter-spacing: 1.5px; }
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .sub { font: 500 25px 'Segoe UI', Arial, sans-serif; fill: #5A7388; }
+      .chip { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #264861; letter-spacing: 1px; }
+      .metric { font: 800 34px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .small { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #61798B; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="80" width="1240" height="740" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="140" y="150" class="kicker">SAFE BY DESIGN</text>
+  <text x="140" y="220" class="title">Protects Users And Itself</text>
+  <text x="140" y="265" class="sub">Prompt injection is blocked, sensitive output is filtered, and user data stays protected.</text>
+
+  <g>
+    <circle cx="500" cy="486" r="182" fill="#EFF7FA"/>
+    <path d="M500 290L664 356V486C664 622 578 714 500 752C422 714 336 622 336 486V356L500 290Z" fill="url(#shield)"/>
+    <path d="M500 352L612 396V486C612 582 552 650 500 680C448 650 388 582 388 486V396L500 352Z" fill="white" opacity="0.22"/>
+    <rect x="450" y="468" width="100" height="92" rx="18" fill="white"/>
+    <path d="M468 466C468 430 480 408 500 408C520 408 532 430 532 466" stroke="white" stroke-width="22" stroke-linecap="round"/>
+    <path d="M480 512L500 532L526 500" stroke="#355F7E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="860" y="336" width="304" height="82" rx="26" fill="#FFFFFF"/>
+    <text x="896" y="388" class="chip">Prompt injection blocked</text>
+    <rect x="860" y="446" width="304" height="82" rx="26" fill="#FFFFFF"/>
+    <text x="896" y="498" class="chip">Sensitive output filtered</text>
+    <rect x="860" y="556" width="304" height="82" rx="26" fill="#FFFFFF"/>
+    <text x="896" y="608" class="chip">User data stays protected</text>
+
+    <path d="M700 374H828" stroke="url(#green)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M700 484H828" stroke="url(#green)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M700 594H828" stroke="url(#green)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="1136" cy="376" r="34" fill="url(#green)"/>
+    <path d="M1122 376L1132 386L1151 366" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1136" cy="486" r="34" fill="url(#green)"/>
+    <path d="M1122 486L1132 496L1151 476" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1136" cy="596" r="34" fill="url(#green)"/>
+    <path d="M1122 596L1132 606L1151 586" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="860" y="652" class="metric">Why it is feasible:</text>
+  <text x="860" y="698" class="small">It solves the trust problem, not just the detection problem.</text>
+
+  <g>
+    <rect x="140" y="734" width="248" height="54" rx="27" fill="#E6F3F0"/>
+    <text x="264" y="769" text-anchor="middle" class="chip">SHADOW GUARD</text>
+    <rect x="412" y="734" width="220" height="54" rx="27" fill="#E7F0F5"/>
+    <text x="522" y="769" text-anchor="middle" class="chip">DLP LAYER</text>
+    <rect x="656" y="734" width="326" height="54" rx="27" fill="#E7F0F5"/>
+    <text x="819" y="769" text-anchor="middle" class="chip">PRIVACY-FIRST AI FLOW</text>
+  </g>
+</svg>

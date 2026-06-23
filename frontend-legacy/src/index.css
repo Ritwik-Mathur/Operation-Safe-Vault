@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-color: #030407;
+  --bg: radial-gradient(circle at 50% -20%, #151b2e 0%, #030407 100%);
+  --bg2: rgba(255, 255, 255, 0.03); 
+  --bg3: rgba(255, 255, 255, 0.05);
+  --bg4: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(255, 255, 255, 0.15);
+  
+  --green: #00f2fe; /* Cyber cyan instead of standard green */
+  --green2: #4facfe;
+  --green3: rgba(0, 242, 254, 0.4);
+  --green-dim: rgba(0, 242, 254, 0.08);
+  
+  --red: #ff2a5f;
+  --red-dim: rgba(255, 42, 95, 0.1);
+  
+  --yellow: #ffb800;
+  --yellow-dim: rgba(255, 184, 0, 0.1);
+  
+  --blue: #0088ff;
+  
+  --text: #ffffff;
+  --text2: #94a3b8;
+  --text3: #64748b;
+  
+  --radius: 12px;
+  --font: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  background-image: var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green); box-shadow: 0 0 10px var(--green); }
+
+input, textarea, select, button { 
+  font-family: var(--font); 
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism utility hooks */
+div[class*="card"], div[class*="panel"], div[class*="sidebar"], header {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+}
+
+button[class*="scanBtn"], button[class*="Btn"] {
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+button[class*="scanBtn"]:hover {
+  box-shadow: 0 0 20px var(--green3), 0 0 40px var(--green-dim);
+}

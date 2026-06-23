@@ -1,0 +1,42 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1120" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FCFD"/>
+      <stop offset="1" stop-color="#EEF4F8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="180" y1="180" x2="520" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9EE6C5"/>
+      <stop offset="1" stop-color="#2D597D"/>
+    </linearGradient>
+    <filter id="shadow" x="50" y="50" width="1100" height="600" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#17314B" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .kicker { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #168C66; letter-spacing: 1.5px; }
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .body { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #5A7388; }
+      .metric { font: 800 66px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .metric2 { font: 800 30px 'Segoe UI', Arial, sans-serif; fill: #2D597D; }
+    </style>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="70" y="70" width="1060" height="560" rx="38" fill="url(#bg)"/>
+  </g>
+  <text x="120" y="140" class="kicker">BUSINESS IMPACT</text>
+  <text x="120" y="208" class="title">Preventative ROI</text>
+  <text x="120" y="254" class="body">
+    <tspan x="120" dy="0">Shift from tracking losses after fraud</tspan>
+    <tspan x="120" dy="30">to stopping the loss at the point of attack.</tspan>
+  </text>
+  <circle cx="270" cy="420" r="120" fill="#EEF7FA"/>
+  <circle cx="270" cy="420" r="86" fill="url(#accent)"/>
+  <text x="220" y="438" style="font:800 34px 'Segoe UI', Arial, sans-serif; fill:white;">Rs</text>
+  <path d="M228 392H312" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <path d="M228 420H302" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <path d="M244 452H304" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <text x="470" y="390" class="metric">Save before loss.</text>
+  <text x="470" y="438" class="metric2">
+    <tspan x="470" dy="0">Stronger than reporting damage</tspan>
+    <tspan x="470" dy="36">after it already happens.</tspan>
+  </text>
+</svg>

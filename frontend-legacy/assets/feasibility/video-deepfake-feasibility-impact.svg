@@ -1,0 +1,73 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="70" x2="1320" y2="830" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#F2F4FD"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="250" y1="250" x2="860" y2="740" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D6B1FF"/>
+      <stop offset="1" stop-color="#8057C8"/>
+    </linearGradient>
+    <linearGradient id="green" x1="860" y1="300" x2="1170" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B1EDC9"/>
+      <stop offset="1" stop-color="#189267"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1260" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#3E2E6E" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .kicker { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #7D56C6; letter-spacing: 1.5px; }
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .sub { font: 500 25px 'Segoe UI', Arial, sans-serif; fill: #5A7388; }
+      .chip { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #264861; letter-spacing: 1px; }
+      .metric { font: 800 34px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .small { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #61798B; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="80" width="1240" height="740" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="140" y="150" class="kicker">BUILDABLE NEXT</text>
+  <text x="140" y="220" class="title">Video Deepfake Detection</text>
+  <text x="140" y="265" class="sub">Facial landmarks, lip-sync mismatch, and frame-level artifacts make this a realistic next-phase module.</text>
+
+  <g>
+    <rect x="176" y="322" width="420" height="300" rx="34" fill="#FFFFFF"/>
+    <rect x="206" y="352" width="360" height="220" rx="24" fill="#F3EEFF"/>
+    <circle cx="386" cy="432" r="82" fill="url(#violet)"/>
+    <circle cx="356" cy="418" r="8" fill="white"/>
+    <circle cx="416" cy="418" r="8" fill="white"/>
+    <path d="M356 470C374 486 398 486 416 470" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <rect x="292" y="520" width="188" height="16" rx="8" fill="#DCCEFF"/>
+    <path d="M300 364L472 364" stroke="#C2ACF8" stroke-width="4" stroke-dasharray="10 10"/>
+    <path d="M236 442L536 442" stroke="#C2ACF8" stroke-width="4" stroke-dasharray="10 10"/>
+  </g>
+
+  <g>
+    <rect x="860" y="332" width="360" height="248" rx="30" fill="#FFFFFF"/>
+    <rect x="892" y="364" width="154" height="22" rx="11" fill="#EFE7FF"/>
+    <text x="902" y="381" class="chip">Roadmap-ready</text>
+    <rect x="892" y="408" width="250" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="438" width="214" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="468" width="238" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="512" width="280" height="18" rx="9" fill="#E9DEF9"/>
+    <text x="902" y="527" class="chip">Voice now, video next</text>
+
+    <circle cx="1144" cy="392" r="38" fill="url(#green)"/>
+    <path d="M1126 392L1138 404L1160 380" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="860" y="652" class="metric">Why it is feasible:</text>
+  <text x="860" y="698" class="small">It extends the same fraud-defense story from calls into future video channels.</text>
+
+  <g>
+    <rect x="140" y="734" width="276" height="54" rx="27" fill="#F0E8FF"/>
+    <text x="278" y="769" text-anchor="middle" class="chip">FACIAL LANDMARKS</text>
+    <rect x="440" y="734" width="252" height="54" rx="27" fill="#F0E8FF"/>
+    <text x="566" y="769" text-anchor="middle" class="chip">LIP-SYNC CHECK</text>
+    <rect x="716" y="734" width="266" height="54" rx="27" fill="#F0E8FF"/>
+    <text x="849" y="769" text-anchor="middle" class="chip">FRAME ARTIFACTS</text>
+  </g>
+</svg>

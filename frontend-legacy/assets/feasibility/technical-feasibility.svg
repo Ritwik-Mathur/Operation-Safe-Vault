@@ -1,0 +1,82 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="140" y1="90" x2="1020" y2="790" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FCFD"/>
+      <stop offset="1" stop-color="#EEF5F8"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="250" y1="180" x2="840" y2="690" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FD3CB"/>
+      <stop offset="1" stop-color="#2E587E"/>
+    </linearGradient>
+    <linearGradient id="green" x1="760" y1="300" x2="950" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#95E7C1"/>
+      <stop offset="1" stop-color="#1C8D62"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="80" width="1040" height="740" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#214766" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font: 800 48px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .subtitle { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #547085; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #274A66; letter-spacing: 1px; }
+      .small { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #5A7184; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="90" width="1020" height="720" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="150" y="170" class="title">Technical Feasibility</text>
+  <text x="150" y="212" class="subtitle">Modular, deployable infrastructure built on proven open-source components</text>
+
+  <g opacity="0.95">
+    <polygon points="375,610 585,500 785,610 575,720" fill="#E3EEF3"/>
+    <polygon points="375,610 375,420 585,310 585,500" fill="#D5E5EC"/>
+    <polygon points="585,500 585,310 785,420 785,610" fill="#CADDE7"/>
+
+    <polygon points="450,560 585,490 720,560 585,630" fill="url(#teal)"/>
+    <polygon points="450,560 450,455 585,385 585,490" fill="#4D7B95"/>
+    <polygon points="585,490 585,385 720,455 720,560" fill="#3A6481"/>
+
+    <polygon points="488,488 585,438 682,488 585,538" fill="#F8FCFD" opacity="0.8"/>
+    <polygon points="488,488 488,445 585,395 585,438" fill="#D8E8EE" opacity="0.65"/>
+    <polygon points="585,438 585,395 682,445 682,488" fill="#C7DCE5" opacity="0.65"/>
+
+    <rect x="560" y="344" width="50" height="14" rx="7" fill="#9AE5C0"/>
+    <rect x="530" y="366" width="110" height="14" rx="7" fill="#85CAE4"/>
+  </g>
+
+  <g>
+    <circle cx="845" cy="330" r="54" fill="#F0F8FB"/>
+    <circle cx="845" cy="330" r="42" fill="url(#green)"/>
+    <path d="M823 330L839 346L868 315" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <polygon points="850,455 910,424 970,455 910,486" fill="#DCEFF1"/>
+    <polygon points="850,455 850,395 910,364 910,424" fill="#CAE3E8"/>
+    <polygon points="910,424 910,364 970,395 970,455" fill="#BCD9E1"/>
+
+    <polygon points="800,535 860,504 920,535 860,566" fill="#DCEFF1"/>
+    <polygon points="800,535 800,475 860,444 860,504" fill="#CAE3E8"/>
+    <polygon points="860,504 860,444 920,475 920,535" fill="#BCD9E1"/>
+
+    <polygon points="900,555 960,524 1020,555 960,586" fill="#DCEFF1"/>
+    <polygon points="900,555 900,495 960,464 960,524" fill="#CAE3E8"/>
+    <polygon points="960,524 960,464 1020,495 1020,555" fill="#BCD9E1"/>
+
+    <path d="M785 495C825 470 845 445 880 438" stroke="#6BC2B0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M785 545C820 540 845 520 885 510" stroke="#69AFCF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M785 575C835 592 880 584 920 570" stroke="#65D6A8" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <rect x="150" y="700" width="210" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="255" y="730" text-anchor="middle" class="label">FASTAPI</text>
+    <rect x="380" y="700" width="250" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="505" y="730" text-anchor="middle" class="label">OPEN SOURCE STACK</text>
+    <rect x="650" y="700" width="280" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="790" y="730" text-anchor="middle" class="label">MODULAR DEPLOYMENT</text>
+  </g>
+
+  <text x="840" y="650" text-anchor="middle" class="small">Scalable server pipeline + reusable security modules</text>
+</svg>

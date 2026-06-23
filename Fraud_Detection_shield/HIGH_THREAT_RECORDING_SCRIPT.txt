@@ -1,0 +1,24 @@
+================================================================================
+READ THIS ALOUD WHEN RECORDING (speak clearly, normal pace — English works best)
+Save as: mono or stereo .WAV, then upload to POST /analyze_voice
+================================================================================
+
+This is urgent. I am calling about your bank account. Your account is suspended and will be blocked within twenty four hours. You must verify immediately — do not hang up. This is an emergency.
+
+The police flagged your credit card and debit card. If you do not cooperate you could be arrested. Keep this call private. Do not tell your family. This is your last chance.
+
+To unlock your account I need your one time password. Read me your OTP now. Also the CVV on your card. Confirm your PIN number and your password for online banking.
+
+Download AnyDesk or TeamViewer for screen share — I need screen share now. I also need your Aadhaar and PAN card numbers for verification.
+
+If you want a refund you still must do this right now or else we will block everything. Verify all details immediately. Act urgent — expire time is running out.
+
+================================================================================
+TIPS FOR A HIGH SCORE
+================================================================================
+- Say words exactly as written: OTP, CVV, Aadhaar, AnyDesk, TeamViewer, screen share,
+  bank account, credit card, debit card, PIN number, password, verify, suspended,
+  police, arrested, refund, blocked / block, urgent, immediately, right now,
+  last chance, twenty four hours, do not tell, keep this call private, do not hang up.
+- Minimize background noise so Whisper transcribes the keywords accurately.
+- 30–90 seconds of audio is enough; longer is fine if you repeat a few phrases.

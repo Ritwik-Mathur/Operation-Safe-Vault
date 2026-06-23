@@ -1,0 +1,66 @@
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.logoIcon { font-size: 1.8rem; }
+.logoText  { font-size: 0.7rem; color: var(--text2); letter-spacing: 0.12em; font-weight: 600; }
+.logoAccent{ font-size: 1rem;   color: var(--green);  letter-spacing: 0.08em; font-weight: 700; }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.navBtn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text2);
+  font-size: 0.85rem;
+  padding: 0.65rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: all 0.15s;
+}
+.navBtn:hover { background: var(--bg3); color: var(--text); border-color: var(--border); }
+.navBtn.active {
+  background: var(--green-dim);
+  border-color: var(--green3);
+  color: var(--green);
+}
+.navIcon  { font-size: 1rem; }
+.navLabel { font-size: 0.85rem; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--text3);
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--text3);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.dotOnline { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.footerText { font-size: 0.72rem; }

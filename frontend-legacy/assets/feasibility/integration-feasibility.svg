@@ -1,0 +1,77 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="80" x2="1040" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FCFD"/>
+      <stop offset="1" stop-color="#EEF5F8"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="310" y1="220" x2="650" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E4362"/>
+      <stop offset="1" stop-color="#0D2234"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="342" y1="235" x2="628" y2="676" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FCFD"/>
+      <stop offset="1" stop-color="#EBF5F7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="720" y1="320" x2="960" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9BE6C4"/>
+      <stop offset="1" stop-color="#138B61"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1060" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#214766" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font: 800 48px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .subtitle { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #547085; }
+      .chip { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #24455E; letter-spacing: 1px; }
+      .small { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #5B7284; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="90" width="1020" height="720" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="150" y="170" class="title">Integration Feasibility</text>
+  <text x="150" y="212" class="subtitle">Simple user access through messaging-first channels like WhatsApp and enterprise APIs</text>
+
+  <g>
+    <rect x="280" y="220" width="380" height="520" rx="52" fill="url(#phone)"/>
+    <rect x="314" y="252" width="312" height="456" rx="34" fill="url(#screen)"/>
+    <rect x="416" y="236" width="108" height="12" rx="6" fill="#DCE8EE" opacity="0.35"/>
+
+    <rect x="350" y="308" width="150" height="54" rx="27" fill="#DFF4EB"/>
+    <text x="425" y="343" text-anchor="middle" class="chip">Suspicious URL</text>
+
+    <rect x="348" y="388" width="228" height="74" rx="26" fill="#EDF4F8"/>
+    <text x="376" y="420" class="small">Forwarded to Fraud Shield AI</text>
+    <text x="376" y="448" class="small">for instant analysis</text>
+
+    <rect x="398" y="510" width="170" height="70" rx="24" fill="#DFF4EB"/>
+    <circle cx="436" cy="545" r="18" fill="#22A56C"/>
+    <path d="M428 545L434 551L445 538" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="468" y="552" class="chip">SAFE TO BLOCK</text>
+  </g>
+
+  <g>
+    <circle cx="862" cy="436" r="104" fill="#F2FAF6"/>
+    <circle cx="862" cy="436" r="82" fill="url(#green)"/>
+    <path d="M834 410C834 390 850 374 870 374C890 374 906 390 906 410V454C906 474 890 490 870 490H864L844 510L848 488C832 482 818 468 818 448V410C818 390 834 374 854 374" fill="white" opacity="0.2"/>
+    <path d="M833 418C833 399 848 384 867 384H871C890 384 905 399 905 418V450C905 469 890 484 871 484H862L842 504L846 482H867C848 482 833 467 833 448V418Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M848 438H892" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    <path d="M848 460H880" stroke="white" stroke-width="8" stroke-linecap="round"/>
+
+    <path d="M644 430C694 430 728 430 760 430" stroke="#5BC2B0" stroke-width="10" stroke-linecap="round"/>
+    <path d="M742 410L778 430L742 450" fill="none" stroke="#5BC2B0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="150" y="700" width="270" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="285" y="730" text-anchor="middle" class="chip">WHATSAPP BOT</text>
+    <rect x="440" y="700" width="220" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="550" y="730" text-anchor="middle" class="chip">WEBHOOK FLOW</text>
+    <rect x="680" y="700" width="300" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="830" y="730" text-anchor="middle" class="chip">LOW FRICTION UX</text>
+  </g>
+
+  <text x="862" y="646" text-anchor="middle" class="small">Users can simply forward suspicious content and receive a verdict</text>
+</svg>

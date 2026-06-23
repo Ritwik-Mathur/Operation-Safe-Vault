@@ -1,0 +1,13 @@
+[
+  {
+    "id": "sandbox-test-01",
+    "timestamp": 1782074289.1531534,
+    "user_verdict": "scam",
+    "original_score": 82.0,
+    "original_verdict": "HIGH RISK",
+    "source": "text",
+    "original_input": "URGENT! bit.ly/secure-login-now",
+    "comment": "Blocked from Threat Sandbox",
+    "was_correct": false
+  }
+]

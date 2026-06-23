@@ -1,0 +1,87 @@
+CAD 4.0
+TEAM MEMBERS:
+RAYIRTH MISRA (RA2411031010052)
+ARYAN SHARMA (RA2411003010389)
+LUBDHAK MANDAL (RA2411031010049)
+YATHARTH KHARE (RA2411003010869)
+TRACK - CYBERSECURITY
+TEAM NAME : PHISH POLICE
+PRODUCT: FRAUD SHIELD AI
+PROBLEM STATEMENT-
+Scammers have upgraded to Sovereign AI Agents that create
+unique, perfectly, written traps for every victim in real-time.
+Legacy security is failing because it relies on 'Known Bad Lists'
+to fight Autonomous Attacks that have never existed before.
+We are no longer fighting simple scripts; we are facing an
+Adversarial Intelligence that outthinks the user at the point of
+attack
+AI scrapes social data to build a bespoke psychological profile
+for every victim. Result: 54% Click Rate.
+Voice clones with 95% emotional accuracy bypass verbal trust
+and KYC verification.
+Malicious links that "detect" sandboxes and act normal until they
+reach the human target
+SOURCE: SLASHNEXT (2023)
+MICROSOFT DIGITAL DEFENSE REPORT (2025)
+PROJECTED ₹70,000 CRORE LOSS IN INDIA THIS
+YEAR TO DEEPFAKE FRAUD ALONE.
+PROPOSED SOLUTION
+01
+One input. One threat score. One clear decision.
+One AI shield that detects scams across text, email, URLs, voice calls, video deepfakes,
+ and file attachments in real time.
+ARCHITECTURAL WORKFLOW DIAGRAM
+                Components
+Multi-source input (Plugin, UI, IMAP)
+Central classification engine
+Credential detection (Regex, NER, Entropy, LLM)
+URL phishing detection (XGBoot, SSL, Deep Scan)
+Deepfake voice detection
+Attachment scanning
+Prompt injection & DLP protection
+Unified phishing detection
+Smart AI Generated Email Detection
+Fidelity Ranking
+Human-in-the-loop feedback
+TECH STACK
+MACHINE LEARNING
+python 3.13
+XGBoost: Structured URL classification and phishing heuristics.
+ChromaDB: Vector Database for storing and matching incoming threats against a
+massive library of known scam patterns.
+OpenAI Whisper (Faster-Whisper): Real-time Speech-to-Text (STT) for processing live
+voice calls.
+Librosa + SpeechBrain: Detect synthetic "artifacts" in Deepfake Voice Detection.
+WEB DEVELOPEMENT
+Next.js 14 / React (frontend)
+Tailwind CSS + Shadcn/UI (stylesheet)
+FastAPI (Python): (backend)
+WebSockets: push live Risk Scores and "Threat Alerts" to the
+dashboard instantly.
+ACTION-FOCUSED (BEST FOR BULLETS)
+URL Sandbox: Playwright (Real-time Detonation)
+Credential Scanner: Microsoft Presidio (PII/NER)
+File Security: YARA & ClamAV (Malware Signatures)
+Live Integration: IMAP (Real-time Email Hooks)
+Shadow Guard: NeMo Guardrails (Anti-Injection)
+CONTAINERIZATION & INFRASTRUCTURE 
+Docker: Creating the sandbox enviroment
+PostgreSQL: Storing threat logs and human-in-the-loop verification data.
+Ollama: High-speed inference engines
+What Makes Us Different
+Fraud Shield AI combines real-time detection, self-protection, and continuous
+learning in one system.
+Sub-200ms Latency: Real-time interception optimized for live calls and high-speed
+mobile networks.
+Scalable Hybrid AI: XGBoost and Llama 3 deliver elite accuracy with minimal compute
+costs.
+Secure "Detonation": Docker-isolated sandboxing safely analyzes malicious links without
+user risk.
+Rapid Integration: Modular API-first design (pip install) for deployment in banking apps in
+days.
+Preventative ROI: Shifting from "tracking losses" to saving ₹70,000 Cr at the point of
+attack.
+Video deepfake detection: Future module for facial landmark and lipsync based
+deepsync analysis
+IMPACT AND FEASIBILITY
+THANK YOU

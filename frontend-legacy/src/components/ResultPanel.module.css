@@ -1,0 +1,118 @@
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+/* Score row */
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.meta { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.verdictBadge {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+  width: fit-content;
+}
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  gap: 1rem;
+}
+.metaKey { color: var(--text3); }
+.metaVal { color: var(--text); font-weight: 600; }
+.mono    { font-size: 0.72rem; color: var(--text2); }
+
+/* Section */
+.section {}
+.sectionTitle {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text2);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Reasons */
+.reasons { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.reasons li {
+  font-size: 0.82rem;
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  background: var(--bg3);
+  border-left: 2px solid var(--green3);
+  border-radius: 0 4px 4px 0;
+  line-height: 1.4;
+}
+.noSignals { font-size: 0.8rem; color: var(--text3); font-style: italic; }
+
+/* Bars */
+.bars { display: flex; flex-direction: column; gap: 0.55rem; }
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.barLabel {
+  width: 80px;
+  font-size: 0.72rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.barTrack {
+  flex: 1;
+  height: 7px;
+  background: var(--bg3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+.barScore  { width: 28px; text-align: right; font-size: 0.78rem; color: var(--text); }
+.barVerdict{ width: 80px; font-size: 0.72rem; text-align: right; }
+
+/* Feedback */
+.fbBtns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.fbBtn {
+  font-size: 0.8rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: var(--bg3);
+  color: var(--text);
+  transition: all 0.15s;
+}
+.fbScam:hover  { background: var(--red-dim);    border-color: var(--red);    color: var(--red); }
+.fbSafe:hover  { background: var(--green-dim);  border-color: var(--green);  color: var(--green); }
+.fbUnsure:hover{ background: var(--yellow-dim); border-color: var(--yellow); color: var(--yellow); }
+.fbAck {
+  font-size: 0.82rem;
+  color: var(--green);
+  padding: 0.45rem 0.9rem;
+  background: var(--green-dim);
+  border: 1px solid var(--green3);
+  border-radius: 6px;
+  display: inline-block;
+}

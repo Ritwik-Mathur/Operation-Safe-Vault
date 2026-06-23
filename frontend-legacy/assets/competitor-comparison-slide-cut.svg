@@ -1,0 +1,141 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7FA9AE"/>
+      <stop offset="0.52" stop-color="#3D6881"/>
+      <stop offset="1" stop-color="#294C69"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="108" y1="176" x2="1492" y2="790" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FCFD"/>
+      <stop offset="1" stop-color="#EEF5F8"/>
+    </linearGradient>
+    <linearGradient id="winner" x1="1212" y1="194" x2="1460" y2="756" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D9FFF0"/>
+      <stop offset="1" stop-color="#B8F0D4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#183149" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #FFFFFF; }
+      .subtle { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #EAF5F8; }
+      .head { font: 700 17px 'Segoe UI', Arial, sans-serif; fill: #183149; }
+      .muted { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #7890A2; }
+      .feature { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #183149; }
+      .cell { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #2A465F; }
+      .cellStrong { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #21455C; }
+      .tick { font: 700 20px 'Segoe UI Symbol', 'Segoe UI', Arial, sans-serif; fill: #0B8F52; }
+      .cross { font: 700 18px 'Segoe UI Symbol', 'Segoe UI', Arial, sans-serif; fill: #D85A6A; }
+      .footer { font: 700 19px 'Segoe UI', Arial, sans-serif; fill: #183149; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="800" y="94" text-anchor="middle" class="title">What Makes Us Different</text>
+  <line x1="558" y1="106" x2="1042" y2="106" stroke="#FFFFFF" stroke-width="4"/>
+  <text x="800" y="138" text-anchor="middle" class="subtle">Competitor comparison across real-world scam defense capabilities</text>
+
+  <g filter="url(#shadow)">
+    <path d="M140 176H1468L1492 200V766L1468 790H132L108 766V200L132 176H140Z" fill="url(#panel)"/>
+  </g>
+
+  <!-- top header cells -->
+  <path d="M156 208H374L390 224V250L374 266H156L140 250V224L156 208Z" fill="#D9E8EE"/>
+  <path d="M422 208H565L581 224V250L565 266H422L406 250V224L422 208Z" fill="#D9E8EE"/>
+  <path d="M613 208H756L772 224V250L756 266H613L597 250V224L613 208Z" fill="#D9E8EE"/>
+  <path d="M804 208H947L963 224V250L947 266H804L788 250V224L804 208Z" fill="#D9E8EE"/>
+  <path d="M995 208H1196L1212 224V250L1196 266H995L979 250V224L995 208Z" fill="#D9E8EE"/>
+  <path d="M1248 194H1440L1460 214V260L1440 280H1248L1228 260V214L1248 194Z" fill="url(#winner)" stroke="#89D0B0" stroke-width="2"/>
+
+  <text x="265" y="244" text-anchor="middle" class="head">Feature</text>
+  <text x="494" y="244" text-anchor="middle" class="head">Truecaller</text>
+  <text x="685" y="244" text-anchor="middle" class="head">Gmail</text>
+  <text x="876" y="244" text-anchor="middle" class="head">Antivirus</text>
+  <text x="1096" y="244" text-anchor="middle" class="head">Zora AI</text>
+  <text x="1344" y="232" text-anchor="middle" class="head">Fraud Shield AI</text>
+  <text x="1344" y="254" text-anchor="middle" class="muted">Highlighted advantage</text>
+
+  <!-- body shell -->
+  <path d="M160 288H1440L1460 308V736L1440 756H160L140 736V308L160 288Z" fill="#FFFFFF" stroke="#D7E3EA" stroke-width="2"/>
+  <path d="M1232 288H1440L1460 308V736L1440 756H1232V288Z" fill="#F0FFF6"/>
+
+  <!-- separators -->
+  <line x1="390" y1="288" x2="390" y2="756" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="581" y1="288" x2="581" y2="756" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="772" y1="288" x2="772" y2="756" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="963" y1="288" x2="963" y2="756" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="1212" y1="288" x2="1212" y2="756" stroke="#E4EDF2" stroke-width="2"/>
+
+  <line x1="140" y1="346" x2="1460" y2="346" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="404" x2="1460" y2="404" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="462" x2="1460" y2="462" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="520" x2="1460" y2="520" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="578" x2="1460" y2="578" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="636" x2="1460" y2="636" stroke="#E4EDF2" stroke-width="2"/>
+  <line x1="140" y1="694" x2="1460" y2="694" stroke="#E4EDF2" stroke-width="2"/>
+
+  <!-- feature labels -->
+  <text x="158" y="324" class="feature">AI-Generated Text Detection</text>
+  <text x="158" y="382" class="feature">Real-Time Voice Fraud Detection</text>
+  <text x="158" y="440" class="feature">Deepfake-Aware Protection</text>
+  <text x="158" y="498" class="feature">Prompt Injection Defense</text>
+  <text x="158" y="556" class="feature">DLP / Output Leak Protection</text>
+  <text x="158" y="614" class="feature">Unified Multi-Channel Coverage</text>
+  <text x="158" y="672" class="feature">Human Feedback Learning Loop</text>
+  <text x="158" y="730" class="feature">Threat Score With Reasoning</text>
+
+  <!-- Truecaller -->
+  <text x="494" y="324" text-anchor="middle" class="cross">✕</text>
+  <text x="494" y="382" text-anchor="middle" class="cell">Caller ID only</text>
+  <text x="494" y="440" text-anchor="middle" class="cross">✕</text>
+  <text x="494" y="498" text-anchor="middle" class="cross">✕</text>
+  <text x="494" y="556" text-anchor="middle" class="cross">✕</text>
+  <text x="494" y="614" text-anchor="middle" class="cell">Partial</text>
+  <text x="494" y="672" text-anchor="middle" class="cell">Report spam</text>
+  <text x="494" y="730" text-anchor="middle" class="cross">✕</text>
+
+  <!-- Gmail -->
+  <text x="685" y="324" text-anchor="middle" class="cross">✕</text>
+  <text x="685" y="382" text-anchor="middle" class="cross">✕</text>
+  <text x="685" y="440" text-anchor="middle" class="cross">✕</text>
+  <text x="685" y="498" text-anchor="middle" class="cross">✕</text>
+  <text x="685" y="556" text-anchor="middle" class="cross">✕</text>
+  <text x="685" y="614" text-anchor="middle" class="cell">Email only</text>
+  <text x="685" y="672" text-anchor="middle" class="cell">Report spam</text>
+  <text x="685" y="730" text-anchor="middle" class="cell">Basic</text>
+
+  <!-- Antivirus -->
+  <text x="876" y="324" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="382" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="440" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="498" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="556" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="614" text-anchor="middle" class="cell">Files only</text>
+  <text x="876" y="672" text-anchor="middle" class="cross">✕</text>
+  <text x="876" y="730" text-anchor="middle" class="cell">Signature-based</text>
+
+  <!-- Zora AI -->
+  <text x="1096" y="324" text-anchor="middle" class="cross">✕</text>
+  <text x="1096" y="382" text-anchor="middle" class="tick">✓</text>
+  <text x="1096" y="440" text-anchor="middle" class="cell">Voice only</text>
+  <text x="1096" y="498" text-anchor="middle" class="tick">✓</text>
+  <text x="1096" y="556" text-anchor="middle" class="cross">✕</text>
+  <text x="1096" y="614" text-anchor="middle" class="cell">Strong</text>
+  <text x="1096" y="672" text-anchor="middle" class="cross">✕</text>
+  <text x="1096" y="730" text-anchor="middle" class="cell">Partial</text>
+
+  <!-- Fraud Shield AI -->
+  <text x="1336" y="324" text-anchor="middle" class="tick">✓</text>
+  <text x="1336" y="382" text-anchor="middle" class="tick">✓</text>
+  <text x="1336" y="440" text-anchor="middle" class="cellStrong">Voice + Video Roadmap</text>
+  <text x="1336" y="498" text-anchor="middle" class="tick">✓</text>
+  <text x="1336" y="556" text-anchor="middle" class="tick">✓</text>
+  <text x="1336" y="614" text-anchor="middle" class="cellStrong">Text, Email, URL, Voice, File</text>
+  <text x="1336" y="672" text-anchor="middle" class="tick">✓</text>
+  <text x="1336" y="730" text-anchor="middle" class="cellStrong">Full score + reasoning</text>
+
+  <!-- footer -->
+  <path d="M398 806H1202L1230 834L1202 862H398L370 834L398 806Z" fill="#F2FBF7" stroke="#B9E8D0" stroke-width="2"/>
+  <text x="800" y="840" text-anchor="middle" class="footer">Others detect known scams. Fraud Shield AI detects scam behavior in real time.</text>
+</svg>

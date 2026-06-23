@@ -1,0 +1,31 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5D8599"/>
+      <stop offset="1" stop-color="#294D6A"/>
+    </linearGradient>
+    <filter id="shadow" x="60" y="100" width="1480" height="1040" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#142B40" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      .title { font: 800 56px 'Segoe UI', Arial, sans-serif; fill: #FFFFFF; }
+      .sub { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #DCEAF0; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="800" y="92" text-anchor="middle" class="title">Feasibility That Judges Can Believe</text>
+  <text x="800" y="130" text-anchor="middle" class="sub">Concrete proof of deployability, usability, cost control, and safe AI operations</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="170" width="660" height="430" rx="34" fill="#F8FCFD"/>
+    <rect x="850" y="170" width="660" height="430" rx="34" fill="#F8FCFD"/>
+    <rect x="90" y="650" width="660" height="430" rx="34" fill="#F8FCFD"/>
+    <rect x="850" y="650" width="660" height="430" rx="34" fill="#F8FCFD"/>
+  </g>
+
+  <image href="technical-feasibility-impact.svg" x="90" y="170" width="660" height="430"/>
+  <image href="integration-feasibility-impact.svg" x="850" y="170" width="660" height="430"/>
+  <image href="economic-feasibility-impact.svg" x="90" y="650" width="660" height="430"/>
+  <image href="legal-privacy-feasibility-impact.svg" x="850" y="650" width="660" height="430"/>
+</svg>

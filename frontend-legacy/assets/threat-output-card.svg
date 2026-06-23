@@ -1,0 +1,51 @@
+<svg width="520" height="220" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="34" y1="34" x2="154" y2="154" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB2B3"/>
+      <stop offset="1" stop-color="#E75F79"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="94" y1="26" x2="500" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9FA"/>
+      <stop offset="1" stop-color="#FFF2F4"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="520" height="220" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#8A3550" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .body { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #5B6070; }
+      .chip { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #86485A; letter-spacing: 1px; }
+      .score { font: 800 42px 'Segoe UI', Arial, sans-serif; fill: #E25470; }
+      .risk { font: 800 24px 'Segoe UI', Arial, sans-serif; fill: #C44561; }
+      .pill { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #79505D; }
+      .icon { stroke: #FFFFFF; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="496" height="196" rx="28" fill="url(#wash)"/>
+    <rect x="12" y="12" width="496" height="196" rx="28" stroke="#EEDCE2" stroke-width="2"/>
+  </g>
+
+  <rect x="162" y="30" width="140" height="28" rx="14" fill="#F8E0E7"/>
+  <text x="232" y="48" text-anchor="middle" class="chip">THREAT OUTPUT</text>
+
+  <circle cx="82" cy="110" r="44" fill="url(#accent)"/>
+  <circle cx="82" cy="110" r="52" stroke="#F2E1E6" stroke-width="2" stroke-dasharray="5 7"/>
+  <path d="M82 65L108 76V97C108 117 94 131 82 137C70 131 56 117 56 97V76L82 65Z" class="icon"/>
+  <path d="M70 102L79 111L95 94" class="icon"/>
+
+  <text x="142" y="92" class="title">Threat Score</text>
+  <text x="142" y="126" class="body">Unified output from all active detectors</text>
+
+  <text x="142" y="170" class="score">92</text>
+  <text x="208" y="168" class="risk">HIGH RISK</text>
+
+  <rect x="142" y="182" width="204" height="6" rx="3" fill="#F0DCE2"/>
+  <rect x="142" y="182" width="188" height="6" rx="3" fill="#E3647F"/>
+
+  <circle cx="142" cy="202" r="6" fill="#F16A86"/>
+  <text x="156" y="206" class="pill">Credential theft + OTP request</text>
+  <circle cx="350" cy="202" r="6" fill="#FFA068"/>
+  <text x="364" y="206" class="pill">Impersonation detected</text>
+</svg>

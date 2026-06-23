@@ -1,0 +1,70 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="90" x2="1040" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FCFD"/>
+      <stop offset="1" stop-color="#EEF5F8"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="370" y1="250" x2="760" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9BE4C4"/>
+      <stop offset="0.55" stop-color="#67B6C6"/>
+      <stop offset="1" stop-color="#264D71"/>
+    </linearGradient>
+    <linearGradient id="stream" x1="760" y1="320" x2="1000" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#95E7C1"/>
+      <stop offset="1" stop-color="#179165"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1060" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#214766" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font: 800 48px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .subtitle { font: 500 24px 'Segoe UI', Arial, sans-serif; fill: #547085; }
+      .chip { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #24455E; letter-spacing: 1px; }
+      .small { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #5B7284; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="90" width="1020" height="720" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="150" y="170" class="title">Legal &amp; Privacy Feasibility</text>
+  <text x="150" y="212" class="subtitle">Security-first controls protect user data and harden the AI pipeline itself</text>
+
+  <g>
+    <circle cx="570" cy="470" r="176" fill="#EFF7FA"/>
+    <path d="M570 274L728 338V462C728 592 646 680 570 716C494 680 412 592 412 462V338L570 274Z" fill="url(#shield)"/>
+    <path d="M570 330L680 374V462C680 556 622 622 570 650C518 622 460 556 460 462V374L570 330Z" fill="white" opacity="0.22"/>
+    <rect x="522" y="446" width="96" height="86" rx="18" fill="white"/>
+    <path d="M540 444C540 408 552 386 570 386C588 386 600 408 600 444" stroke="white" stroke-width="22" stroke-linecap="round"/>
+    <path d="M552 486L570 504L594 474" stroke="#3B6D8A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="818" y="334" width="150" height="176" rx="26" fill="#FFFFFF"/>
+    <rect x="840" y="370" width="106" height="12" rx="6" fill="#DCEAF0"/>
+    <rect x="840" y="400" width="86" height="12" rx="6" fill="#DCEAF0"/>
+    <rect x="840" y="430" width="94" height="12" rx="6" fill="#DCEAF0"/>
+    <rect x="840" y="460" width="70" height="12" rx="6" fill="#DCEAF0"/>
+    <path d="M752 410C794 410 816 410 842 410" stroke="url(#stream)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M752 452C790 452 812 452 838 452" stroke="url(#stream)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M752 494C788 494 810 494 836 494" stroke="url(#stream)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="910" cy="586" r="58" fill="#F1FAF5"/>
+    <circle cx="910" cy="586" r="42" fill="#21A069"/>
+    <path d="M890 586L904 600L929 574" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="150" y="700" width="240" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="270" y="730" text-anchor="middle" class="chip">SHADOW GUARD</text>
+    <rect x="410" y="700" width="240" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="530" y="730" text-anchor="middle" class="chip">DLP CONTROL</text>
+    <rect x="670" y="700" width="280" height="46" rx="23" fill="#E6F1F4"/>
+    <text x="810" y="730" text-anchor="middle" class="chip">PRIVACY-FIRST PIPELINE</text>
+  </g>
+
+  <text x="600" y="650" text-anchor="middle" class="small">Incoming content is filtered, protected, and scored without exposing sensitive outputs</text>
+</svg>

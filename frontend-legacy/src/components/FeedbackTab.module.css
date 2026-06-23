@@ -1,0 +1,72 @@
+.wrap { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.statCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+.statNum { font-size: 2rem; font-weight: 700; color: var(--text); line-height: 1; }
+.statGreen { color: var(--green); }
+.statLabel { font-size: 0.72rem; color: var(--text2); margin-top: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.tableSection {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.sectionTitle { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text2); }
+.refreshBtn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text2);
+  font-size: 0.78rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.refreshBtn:hover:not(:disabled) { border-color: var(--green3); color: var(--green); }
+.refreshBtn:disabled { opacity: 0.5; }
+
+.tableWrap { overflow-x: auto; }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.table th {
+  background: var(--bg3);
+  color: var(--text2);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg3); }
+.mono { font-size: 0.72rem; color: var(--text2); }
+.dim  { color: var(--text2); font-size: 0.78rem; }
+.empty { text-align: center; color: var(--text3); font-style: italic; padding: 2rem; }

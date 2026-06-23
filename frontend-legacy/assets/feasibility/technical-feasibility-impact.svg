@@ -1,0 +1,73 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="70" x2="1320" y2="830" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FCFD"/>
+      <stop offset="1" stop-color="#EEF4F8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="240" x2="860" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#91D7C8"/>
+      <stop offset="1" stop-color="#28567A"/>
+    </linearGradient>
+    <linearGradient id="green" x1="860" y1="290" x2="1170" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B1EDC9"/>
+      <stop offset="1" stop-color="#189267"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1260" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#16314B" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .kicker { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #168C66; letter-spacing: 1.5px; }
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .sub { font: 500 25px 'Segoe UI', Arial, sans-serif; fill: #5A7388; }
+      .chip { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #264861; letter-spacing: 1px; }
+      .metric { font: 800 34px 'Segoe UI', Arial, sans-serif; fill: #142235; }
+      .small { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #61798B; }
+    </style>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="80" width="1240" height="740" rx="40" fill="url(#bg)"/>
+  </g>
+
+  <text x="140" y="150" class="kicker">DEPLOYABLE TODAY</text>
+  <text x="140" y="220" class="title">Built on Existing Stack</text>
+  <text x="140" y="265" class="sub">FastAPI, vector search, browser sandboxing, and speech models already exist today.</text>
+
+  <g>
+    <polygon points="280,618 488,512 690,618 482,726" fill="#DFEBF1"/>
+    <polygon points="280,618 280,438 488,332 488,512" fill="#D3E2EA"/>
+    <polygon points="488,512 488,332 690,438 690,618" fill="#C5D8E3"/>
+
+    <polygon points="352,576 488,506 624,576 488,646" fill="url(#accent)"/>
+    <polygon points="352,576 352,474 488,404 488,506" fill="#416A86"/>
+    <polygon points="488,506 488,404 624,474 624,576" fill="#2E5473"/>
+
+    <rect x="446" y="386" width="84" height="24" rx="12" fill="#9DE7C3"/>
+    <rect x="414" y="420" width="148" height="18" rx="9" fill="#87CFE0"/>
+  </g>
+
+  <g>
+    <rect x="860" y="332" width="360" height="248" rx="30" fill="#FFFFFF"/>
+    <rect x="892" y="364" width="170" height="22" rx="11" fill="#E8F2F5"/>
+    <rect x="892" y="406" width="252" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="436" width="228" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="466" width="192" height="16" rx="8" fill="#E8F2F5"/>
+    <rect x="892" y="512" width="296" height="18" rx="9" fill="#DDF3EA"/>
+    <text x="902" y="527" class="chip">API, dashboard, or enterprise deployment</text>
+
+    <circle cx="1144" cy="392" r="38" fill="url(#green)"/>
+    <path d="M1126 392L1138 404L1160 380" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="860" y="652" class="metric">Why it is feasible:</text>
+  <text x="860" y="698" class="small">No custom hardware. No new research. Real components, real deployment path.</text>
+
+  <g>
+    <rect x="140" y="734" width="220" height="54" rx="27" fill="#E6F3F0"/>
+    <text x="250" y="769" text-anchor="middle" class="chip">FASTAPI</text>
+    <rect x="384" y="734" width="268" height="54" rx="27" fill="#E7F0F5"/>
+    <text x="518" y="769" text-anchor="middle" class="chip">CHROMADB + NLP</text>
+    <rect x="676" y="734" width="320" height="54" rx="27" fill="#E7F0F5"/>
+    <text x="836" y="769" text-anchor="middle" class="chip">PLAYWRIGHT + WHISPER</text>
+  </g>
+</svg>

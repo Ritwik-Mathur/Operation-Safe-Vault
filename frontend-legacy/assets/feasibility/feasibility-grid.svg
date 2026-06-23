@@ -1,0 +1,31 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5D8599"/>
+      <stop offset="1" stop-color="#294D6A"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="110" width="1460" height="1000" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#142B40" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      .title { font: 800 54px 'Segoe UI', Arial, sans-serif; fill: #FFFFFF; }
+      .label { font: 800 26px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .sub { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #62798C; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="800" y="98" text-anchor="middle" class="title">Feasibility Overview</text>
+
+  <g filter="url(#shadow)">
+    <rect x="108" y="150" width="640" height="410" rx="34" fill="#F8FCFD"/>
+    <rect x="852" y="150" width="640" height="410" rx="34" fill="#F8FCFD"/>
+    <rect x="108" y="632" width="640" height="410" rx="34" fill="#F8FCFD"/>
+    <rect x="852" y="632" width="640" height="410" rx="34" fill="#F8FCFD"/>
+  </g>
+
+  <image href="technical-feasibility.svg" x="108" y="150" width="640" height="410"/>
+  <image href="integration-feasibility.svg" x="852" y="150" width="640" height="410"/>
+  <image href="economic-feasibility.svg" x="108" y="632" width="640" height="410"/>
+  <image href="legal-privacy-feasibility.svg" x="852" y="632" width="640" height="410"/>
+</svg>

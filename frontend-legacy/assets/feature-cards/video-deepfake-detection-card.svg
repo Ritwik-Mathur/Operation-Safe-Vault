@@ -1,0 +1,38 @@
+<svg width="520" height="220" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="34" y1="34" x2="154" y2="154" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9A8CFF"/>
+      <stop offset="1" stop-color="#DF66B4"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="94" y1="26" x2="500" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF8FD"/>
+      <stop offset="1" stop-color="#F5ECF9"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="520" height="220" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#774985" flood-opacity="0.17"/>
+    </filter>
+    <style>
+      .title { font: 700 27px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .body { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #5E5472; }
+      .chip { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #7A4578; letter-spacing: 1px; }
+      .icon { stroke: #FFFFFF; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    </style>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="496" height="196" rx="28" fill="url(#wash)"/>
+    <rect x="12" y="12" width="496" height="196" rx="28" stroke="#E6D8ED" stroke-width="2"/>
+  </g>
+  <rect x="138" y="30" width="98" height="28" rx="14" fill="#F6D9EC"/>
+  <text x="187" y="48" text-anchor="middle" class="chip">ROADMAP</text>
+  <circle cx="82" cy="110" r="44" fill="url(#accent)"/>
+  <circle cx="82" cy="110" r="52" stroke="#E9DDF0" stroke-width="2" stroke-dasharray="5 7"/>
+  <rect x="56" y="77" width="52" height="38" rx="8" class="icon"/>
+  <path d="M108 84L124 75V117L108 108" class="icon"/>
+  <circle cx="74" cy="96" r="4" fill="#FFFFFF"/>
+  <path d="M69 110C73 104 79 101 86 101C92 101 98 104 102 110" class="icon"/>
+  <text x="142" y="95" class="title">Video Deepfake Detection</text>
+  <text x="142" y="128" class="body">Future module for facial landmark and</text>
+  <text x="142" y="152" class="body">lip-sync based deepfake analysis</text>
+  <rect x="142" y="176" width="204" height="6" rx="3" fill="#E6D8ED"/>
+  <rect x="142" y="176" width="156" height="6" rx="3" fill="#C66AA6"/>
+</svg>

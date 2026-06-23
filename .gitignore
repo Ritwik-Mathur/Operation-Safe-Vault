@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+
+# ChromaDB runtime data
+chroma_db/
+
+# Voice enrollment embeddings (contain biometric data — keep out of VCS)
+backend/data/voice_enrollments/*.npy
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test audio (binary blobs — large, no need in repo)
+test_audio/

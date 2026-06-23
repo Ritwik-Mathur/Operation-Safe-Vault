@@ -1,0 +1,39 @@
+<svg width="520" height="220" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="34" y1="34" x2="154" y2="154" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FC0C2"/>
+      <stop offset="1" stop-color="#2F5B7D"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="94" y1="26" x2="500" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FBFD"/>
+      <stop offset="1" stop-color="#EEF4F7"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="520" height="220" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#274A67" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #162235; }
+      .body { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #4A5F72; }
+      .chip { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #355D71; letter-spacing: 1px; }
+      .icon { stroke: #FFFFFF; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    </style>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="496" height="196" rx="28" fill="url(#wash)"/>
+    <rect x="12" y="12" width="496" height="196" rx="28" stroke="#D7E3EA" stroke-width="2"/>
+  </g>
+  <rect x="138" y="30" width="111" height="28" rx="14" fill="#E7F1F5"/>
+  <text x="194" y="48" text-anchor="middle" class="chip">REAL-TIME</text>
+  <circle cx="82" cy="110" r="44" fill="url(#accent)"/>
+  <circle cx="82" cy="110" r="52" stroke="#DCE9EF" stroke-width="2" stroke-dasharray="5 7"/>
+  <rect x="71" y="61" width="22" height="48" rx="11" class="icon"/>
+  <path d="M61 98C61 113 71 124 82 124C93 124 103 113 103 98" class="icon"/>
+  <path d="M82 124V139" class="icon"/>
+  <path d="M67 139H97" class="icon"/>
+  <path d="M111 83C118 90 122 99 122 110C122 121 118 130 111 137" class="icon"/>
+  <text x="142" y="95" class="title">Voice Fraud Detection</text>
+  <text x="142" y="128" class="body">Analyzes live call transcripts, acoustic</text>
+  <text x="142" y="152" class="body">signals, and deepfake indicators</text>
+  <rect x="142" y="176" width="204" height="6" rx="3" fill="#DCE7ED"/>
+  <rect x="142" y="176" width="184" height="6" rx="3" fill="#49758B"/>
+</svg>
