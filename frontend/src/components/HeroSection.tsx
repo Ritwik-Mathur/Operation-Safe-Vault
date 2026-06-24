@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, ChevronRight, Lock } from 'lucide-react';
+import { Shield, ChevronRight, Lock, Mail } from 'lucide-react';
 
 export const HeroSection = () => {
   // "Deploy Shield Now" scrolls to the interactive sandbox so users can
@@ -19,6 +19,10 @@ export const HeroSection = () => {
       '_blank',
       'noopener,noreferrer',
     );
+  };
+
+  const handleGmail = () => {
+    window.location.href = '/inbox';
   };
 
   return (
@@ -53,7 +57,6 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            {/* FIX: "Deploy Shield Now" scrolls to the live sandbox section */}
             <motion.button
               id="hero-deploy-shield"
               onClick={handleDeploy}
@@ -61,18 +64,28 @@ export const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-primary text-black px-8 py-4 rounded-xl font-headline font-bold flex items-center gap-3 shadow-[0_0_20px_rgba(49,227,104,0.3)] transition-shadow"
             >
-              Deploy Shield Now
+              Deploy Shield
               <Shield className="w-5 h-5" />
             </motion.button>
 
-            {/* FIX: "View Documentation" opens FastAPI /docs in a new tab */}
+            <motion.button
+              id="hero-gmail-scan"
+              onClick={handleGmail}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-headline font-bold flex items-center gap-3 hover:bg-white/20 transition-all"
+            >
+              Scan Gmail
+              <Mail className="w-5 h-5 text-primary" />
+            </motion.button>
+
             <motion.button
               id="hero-view-docs"
               onClick={handleDocs}
               whileHover={{ backgroundColor: 'rgba(255,255,255,0.05)' }}
               className="border border-outline bg-surface/50 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-headline font-medium flex items-center gap-2 transition-colors"
             >
-              View Documentation
+              Docs
               <ChevronRight className="w-4 h-4" />
             </motion.button>
           </div>

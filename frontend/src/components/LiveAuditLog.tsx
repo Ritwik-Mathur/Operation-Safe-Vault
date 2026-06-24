@@ -17,13 +17,34 @@ const mockLogs = [
 ];
 
 export const LiveAuditLog = () => {
-  const [logs, setLogs] = useState(mockLogs.slice(0, 4));
+  const [mounted, setMounted] = useState(false);
+  const [logs, setLogs] = useState(() => 
+    mockLogs.slice(0, 4).map((log) => ({
+      ...log,
+      timestamp: '--:--:--'
+    }))
+  );
 
   useEffect(() => {
+    setMounted(true);
+    // Initialize with actual times on client
+    setLogs((prev) => 
+      prev.map(log => ({
+        ...log,
+        timestamp: new Date().toLocaleTimeString([], { hour12: false })
+      }))
+    );
+
     const interval = setInterval(() => {
       setLogs((prev) => {
         const nextLog = mockLogs[Math.floor(Math.random() * mockLogs.length)];
-        const newLogs = [...prev.slice(1), nextLog];
+        const newLogs = [
+          ...prev.slice(1), 
+          { 
+            ...nextLog, 
+            timestamp: new Date().toLocaleTimeString([], { hour12: false }) 
+          }
+        ];
         return newLogs;
       });
     }, 3000);
@@ -55,7 +76,7 @@ export const LiveAuditLog = () => {
               className="flex items-start gap-4 group/item"
             >
               <span className="text-on-surface-variant/30 select-none">
-                {new Date().toLocaleTimeString([], { hour12: false })}
+                {mounted ? log.timestamp : '--:--:--'}
               </span>
               <div className="flex gap-2">
                 {log.type === 'info' && <CloudLightning className="w-3.5 h-3.5 text-blue-400 mt-0.5" />}

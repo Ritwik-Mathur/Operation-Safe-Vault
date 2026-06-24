@@ -82,7 +82,12 @@ export const FeatureGrid = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               whileHover={{ y: -8, borderColor: 'rgba(49, 227, 104, 0.4)' }}
-              className={`group p-8 rounded-3xl glass-panel relative overflow-hidden transition-all hover:bg-surface-high border-b-2 border-outline/10 ${feature.size}`}
+              onClick={() => {
+                if (feature.title === "Email Intelligence") {
+                  window.location.href = '/inbox';
+                }
+              }}
+              className={`group p-8 rounded-3xl glass-panel relative overflow-hidden transition-all hover:bg-surface-high border-b-2 border-outline/10 ${feature.size} ${feature.title === "Email Intelligence" ? 'cursor-pointer' : ''}`}
             >
               <div className="relative z-10">
                 <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-primary/20">

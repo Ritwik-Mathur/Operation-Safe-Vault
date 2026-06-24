@@ -67,25 +67,34 @@ function scoreRing(score: number) {
 }
 
 // ── WAV Encoding Helpers ──────────────────────────────────────────────────────
-function encodeWAV(samples: Float32Array, sampleRate: number): ArrayBuffer {
-  const buffer = new ArrayBuffer(44 + samples.length * 2);
+function encodeWAV(buffers: Float32Array[], sampleRate: number, numChannels: number = 1): ArrayBuffer {
+  const bytesPerSample = 2;
+  const numSamples = buffers.reduce((acc, b) => acc + b.length, 0);
+  const buffer = new ArrayBuffer(44 + numSamples * bytesPerSample);
   const view = new DataView(buffer);
 
   writeString(view, 0, 'RIFF');
-  view.setUint32(4, 36 + samples.length * 2, true);
+  view.setUint32(4, 36 + numSamples * bytesPerSample, true);
   writeString(view, 8, 'WAVE');
   writeString(view, 12, 'fmt ');
   view.setUint32(16, 16, true);
-  view.setUint16(20, 1, true);
-  view.setUint16(22, 1, true);
+  view.setUint16(20, 1, true); // PCM
+  view.setUint16(22, numChannels, true);
   view.setUint32(24, sampleRate, true);
-  view.setUint32(28, sampleRate * 2, true);
-  view.setUint16(32, 2, true);
+  view.setUint32(28, sampleRate * numChannels * bytesPerSample, true);
+  view.setUint16(32, numChannels * bytesPerSample, true);
   view.setUint16(34, 16, true);
   writeString(view, 36, 'data');
-  view.setUint32(40, samples.length * 2, true);
+  view.setUint32(40, numSamples * bytesPerSample, true);
 
-  floatTo16BitPCM(view, 44, samples);
+  let offset = 44;
+  for (const b of buffers) {
+    for (let i = 0; i < b.length; i++) {
+      let s = Math.max(-1, Math.min(1, b[i]));
+      view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+      offset += 2;
+    }
+  }
 
   return buffer;
 }
@@ -93,13 +102,6 @@ function encodeWAV(samples: Float32Array, sampleRate: number): ArrayBuffer {
 function writeString(view: DataView, offset: number, string: string) {
   for (let i = 0; i < string.length; i++) {
     view.setUint8(offset + i, string.charCodeAt(i));
-  }
-}
-
-function floatTo16BitPCM(output: DataView, offset: number, input: Float32Array) {
-  for (let i = 0; i < input.length; i++, offset += 2) {
-    let s = Math.max(-1, Math.min(1, input[i]));
-    output.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
   }
 }
 
@@ -136,9 +138,6 @@ const ReasonList = ({ reasons }: { reasons: string[] }) => (
   </ul>
 );
 
-// ─────────────────────────────────────────────────────────────────────────────
-// MAIN PAGE
-// ─────────────────────────────────────────────────────────────────────────────
 export default function VoiceAnalyzerPage() {
   // ── Upload tab state ───────────────────────────────────────────────────────
   const [file, setFile]         = useState<File | null>(null);
@@ -200,11 +199,16 @@ export default function VoiceAnalyzerPage() {
     }
   };
 
-  // ── Live call WebSocket ────────────────────────────────────────────────────
+  // ─────────────────────────────────────────────────────────────────────────────
+  // LIVE CALL TAB
+  // ─────────────────────────────────────────────────────────────────────────────
+  const [fullTranscript, setFullTranscript] = useState("");
+
   const connectWs = (captureAudio: boolean = false) => {
     const id = `call-${Date.now().toString(36)}`;
     setCallId(id);
     setChunks([]);
+    setFullTranscript("");
     setLatestSpec(null);
     setWsStatus("connecting");
     setCaptureError(null);
@@ -251,12 +255,19 @@ export default function VoiceAnalyzerPage() {
             reasons:               msg.reasons ?? [],
           };
           setChunks((prev) => [...prev.slice(-19), chunk]);   // keep last 20
+          
+          if (msg.current_chunk_transcript) {
+            setFullTranscript(prev => (prev + " " + msg.current_chunk_transcript).trim());
+          }
+
           if (chunk.spectrogram_image) {
             setLatestSpec(chunk.spectrogram_image);
             setLatestSpecChunk(chunk.chunk_count);
           }
         }
-      } catch {/* ignore parse errors */}
+      } catch (err) {
+        console.error("WS error:", err);
+      }
     };
   };
 
@@ -296,22 +307,26 @@ export default function VoiceAnalyzerPage() {
     const audioCtx = new AudioCtxClass({ sampleRate: 16000 });
     audioContextRef.current = audioCtx;
 
-    // 4. Create ScriptProcessorNode for sample accumulation
+    // 4. Create ScriptProcessorNode for sample accumulation (2 inputs, 2 outputs)
     const bufferSize = 4096;
-    const processor = audioCtx.createScriptProcessor(bufferSize, 1, 1);
+    const processor = audioCtx.createScriptProcessor(bufferSize, 2, 2);
     scriptProcessorRef.current = processor;
 
-    // Route mic into processor (if available)
+    const merger = audioCtx.createChannelMerger(2);
+
+    // Route mic into Left channel (if available)
     if (micStream && micStream.getAudioTracks().length > 0) {
       const micSource = audioCtx.createMediaStreamSource(micStream);
-      micSource.connect(processor);
+      micSource.connect(merger, 0, 0);
     }
 
-    // Route tab audio into processor (if available)
+    // Route tab audio into Right channel (if available)
     if (tabAudioTracks.length > 0) {
       const tabSource = audioCtx.createMediaStreamSource(new MediaStream(tabAudioTracks));
-      tabSource.connect(processor);
+      tabSource.connect(merger, 0, 1);
     }
+
+    merger.connect(processor);
 
     // Connect processor to destination via a silence gain node to trigger audio events
     const silenceGain = audioCtx.createGain();
@@ -319,32 +334,29 @@ export default function VoiceAnalyzerPage() {
     processor.connect(silenceGain);
     silenceGain.connect(audioCtx.destination);
 
-    // 5. Accumulate mono float samples
+    // 5. Accumulate stereo samples (interleaved)
     sampleBufferRef.current = [];
     processor.onaudioprocess = (event) => {
-      const inputBuffer = event.inputBuffer.getChannelData(0);
-      sampleBufferRef.current.push(new Float32Array(inputBuffer));
+      const left  = event.inputBuffer.getChannelData(0);
+      const right = event.inputBuffer.getChannelData(1);
+      
+      const interleaved = new Float32Array(left.length + right.length);
+      for (let i = 0; i < left.length; i++) {
+        interleaved[i * 2]     = left[i];
+        interleaved[i * 2 + 1] = right[i];
+      }
+      sampleBufferRef.current.push(interleaved);
     };
 
-    // 6. Every 5 seconds, package samples as a 16-bit 16kHz WAV and send
+    // 6. Every 5 seconds, package samples as a 16-bit 16kHz STEREO WAV and send
     recordIntervalRef.current = setInterval(() => {
       const buffers = sampleBufferRef.current;
       if (buffers.length === 0) return;
 
-      let totalSamples = 0;
-      for (const b of buffers) totalSamples += b.length;
-
-      const mergedSamples = new Float32Array(totalSamples);
-      let offset = 0;
-      for (const b of buffers) {
-        mergedSamples.set(b, offset);
-        offset += b.length;
-      }
-
       // Clear buffer for next chunk
       sampleBufferRef.current = [];
 
-      const wavBuffer = encodeWAV(mergedSamples, 16000);
+      const wavBuffer = encodeWAV(buffers, 16000, 2);
       if (ws.readyState === WebSocket.OPEN) {
         ws.send(wavBuffer);
       }

@@ -181,24 +181,86 @@ def get_detection_stats() -> dict:
 
 # ── Fix 2: Fast transcription for live calls using tiny model ────────────────
 def transcribe_fast(audio_bytes: bytes, filename: str) -> str:
-    """Use Whisper tiny model for live call speed."""
+    """Use Whisper tiny model. Supports stereo splitting for speaker labeling."""
     import tempfile
+    import wave
+    import numpy as np
     try:
         from faster_whisper import WhisperModel
         suffix = os.path.splitext(filename)[-1] or ".wav"
+        
         with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
             tmp.write(audio_bytes)
             tmp_path = tmp.name
-        # Fix 2: tiny model is 4x faster than base
+
+        # Check if stereo
+        with wave.open(tmp_path, 'rb') as wf:
+            channels = wf.getnchannels()
+            n_frames = wf.getnframes()
+            sample_rate = wf.getframerate()
+            content = wf.readframes(n_frames)
+            samples = np.frombuffer(content, dtype=np.int16)
+
         model = WhisperModel("tiny", device="cpu", compute_type="int8")
-        segments, info = model.transcribe(tmp_path, language=None)
-        transcript = " ".join(s.text for s in segments)
-        # Fix 3: translate Hindi/Urdu to English
-        if info.language in ("hi", "ur", "pa"):
-            segments2, _ = model.transcribe(tmp_path, language=info.language, task="translate")
-            transcript = " ".join(s.text for s in segments2)
-        os.unlink(tmp_path)
-        return transcript.strip()
+
+        if channels == 2:
+            # Reshape and split
+            samples = samples.reshape(-1, 2)
+            left_samples  = samples[:, 0]
+            right_samples = samples[:, 1]
+
+            def diag_transcribe(samps):
+                import io
+                # Write to temp wav in memory
+                buf = io.BytesIO()
+                with wave.open(buf, 'wb') as tw:
+                    tw.setnchannels(1)
+                    tw.setsampwidth(2)
+                    tw.setframerate(sample_rate)
+                    tw.writeframes(samps.tobytes())
+                buf.seek(0)
+                
+                # Optimized prompt for Indo-English context
+                segments, info = model.transcribe(
+                    buf, 
+                    language=None, 
+                    initial_prompt="English and Hindi conversation about banking and security."
+                )
+                
+                transcript = " ".join(s.text for s in segments).strip()
+                
+                # Force English/Hindi bias — if it detects random languages like 'es' (Spanish) or 'cy' (Welsh),
+                # we re-transcribe in English.
+                if info.language not in ("en", "hi", "ur", "pa", "bn", "gu"):
+                    buf.seek(0)
+                    segments, _ = model.transcribe(buf, language="en")
+                    transcript = " ".join(s.text for s in segments).strip()
+
+                # Hindi/Urdu Translation Fix
+                if info.language in ("hi", "ur", "pa"):
+                    buf.seek(0)
+                    segments2, _ = model.transcribe(buf, language=info.language, task="translate")
+                    transcript = " ".join(s.text for s in segments2).strip()
+                return transcript
+
+            you_text   = diag_transcribe(left_samples)
+            caller_text = diag_transcribe(right_samples)
+
+            transcript = ""
+            if you_text:   transcript += f"[You]: {you_text} "
+            if caller_text: transcript += f"[Person 1]: {caller_text}"
+            
+            os.unlink(tmp_path)
+            return transcript.strip()
+        else:
+            # Mono fallback
+            segments, info = model.transcribe(tmp_path, language=None)
+            transcript = " ".join(s.text for s in segments)
+            if info.language in ("hi", "ur", "pa"):
+                segments2, _ = model.transcribe(tmp_path, language=info.language, task="translate")
+                transcript = " ".join(s.text for s in segments2)
+            os.unlink(tmp_path)
+            return transcript.strip()
     except Exception as e:
         return ""
 
@@ -311,6 +373,7 @@ def process_chunk(call_id: str, audio_bytes: bytes, vector_db=None) -> dict:
 
     # ── Build result dict ─────────────────────────────────────────────────────
     result = state.to_dict()
+    result["current_chunk_transcript"] = transcript
 
     # Attach timing fields (always present so frontend can render a live timer)
     result["elapsed_seconds"] = elapsed
